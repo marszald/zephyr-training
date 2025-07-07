@@ -1,0 +1,4 @@
+CompileFlags:
+  Remove:
+    - '-fno-reorder-functions'
+    - '-fno-freestanding'

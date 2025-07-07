@@ -1,0 +1,10 @@
+{
+    "clangd.arguments": [
+        "--pretty",
+        "--compile-commands-dir=build",
+        "--background-index",
+        "--log=error",
+        "--header-insertion=never",
+        "--query-driver=/usr/bin/arm-none-eabi-g*",
+    ]
+}

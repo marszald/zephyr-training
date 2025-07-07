@@ -1,0 +1,24 @@
+{
+    "name": "zephyr",
+    "image": "ghcr.io/zephyrproject-rtos/zephyr-build:main",
+    "features": {
+        "ghcr.io/goodbyte-software/goodbyte-features/arm-none-eabi-gcc:1.1.0": {},
+        "ghcr.io/devcontainers-community/features/llvm": {
+            "version": "20"
+        },
+        "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
+    },
+    "postCreateCommand": "./.devcontainer/setup-zephyr.sh",
+    "mounts": [
+        "source=zephyr-modules,target=/workspaces/zephyr-training/deps,type=volume"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "marus25.cortex-debug"
+            ]
+        }
+    },
+    "remoteUser": "user"
+}
