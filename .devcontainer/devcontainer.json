@@ -1,6 +1,9 @@
 {
     "name": "zephyr",
-    "image": "ghcr.io/zephyrproject-rtos/zephyr-build:main",
+    // Image version should be chosen so that 
+    // underlying SDK version matches the zephyr version.
+    // See: https://github.com/zephyrproject-rtos/sdk-ng/wiki/Zephyr-SDK-Version-Compatibility-Matrix
+    "image": "ghcr.io/zephyrproject-rtos/zephyr-build:v0.27.5",
     "features": {
         "ghcr.io/goodbyte-software/goodbyte-features/arm-none-eabi-gcc:1.1.0": {},
         "ghcr.io/devcontainers-community/features/llvm": {

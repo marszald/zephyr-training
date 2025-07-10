@@ -49,7 +49,7 @@ Once your environment is ready, you can build and run the training application u
 
 ```bash
 # Build for the native simulator
-west build --board native_sim
+west build --board native_sim app
 
 # Run the built application
 west build --target run
