@@ -9,11 +9,17 @@
         "ghcr.io/devcontainers-community/features/llvm": {
             "version": "20"
         },
-        "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {}
+        "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
+        "ghcr.io/bascodes/devcontainer-features/usbutils:1": {},
+        "ghcr.io/goodbyte-software/goodbyte-features/jlink:1": {}
     },
-    "postCreateCommand": "./.devcontainer/setup-zephyr.sh",
+    "postCreateCommand": "./.devcontainer/post-create.sh",
+    "runArgs": [
+         "--privileged"
+    ],
     "mounts": [
-        "source=zephyr-modules,target=/workspaces/zephyr-training/deps,type=volume"
+        "source=zephyr-modules,target=/workspaces/zephyr-training/deps,type=volume",
+        "source=/dev,target=/dev,type=bind"
     ],
     "customizations": {
         "vscode": {
