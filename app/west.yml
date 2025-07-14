@@ -9,6 +9,7 @@ manifest:
         name-allowlist:
           - cmsis
           - hal_nxp
+          - hal_nordic
         path-prefix: deps
 
   self:
